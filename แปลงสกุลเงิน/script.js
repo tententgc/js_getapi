@@ -9,6 +9,9 @@ const swap  = document.getElementById('btn');
 
 currency_one.addEventListener('change',calculatemoney);
 currency_two.addEventListener('change',calculatemoney);
+amount_one.addEventListener('input',calculatemoney);
+amount_two.addEventListener('input',calculatemoney);
+
 
 // call api data
 function calculatemoney(){
@@ -18,6 +21,13 @@ function calculatemoney(){
     fetch(url).then(res=>res.json()).then(data=>{
         const rate = data.conversion_rates[two];
         ratetext.innerText=`1 = ${one}=${rate}${two}`;
+        amount_two.value=(amount_one.value*rate).toFixed(2);
     })
 }
+swap.addEventListener('click',()=>{
+    const temp = currency_one.value;
+    currency_one.value=currency_two.value;
+    currency_two.value=temp;
+    calculatemoney()
+})
 calculatemoney();
