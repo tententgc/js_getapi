@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,,initial-scale = 1.0" /> 
         <title>รายรับ รายจ่าย</title>
-
     </head>
     <body>
         <h2>โปรแกรมรายรับ -รายจ่าย </h2>
@@ -14,27 +13,28 @@
             <div class="income-expense-container">
                 <div>
                     <h4>รายรับ</h4>
-                    <p id="money-plus" class="money plus">฿5000</p>
+                    <p id="money_plus" class="money plus">฿5000</p>
                 </div>
                 <div>
                     <h4>รายจ่าย</h4>
-                    <p id="money-minus" class="money minus">฿200</p>
+                    <p id="money_minus" class="money minus">฿200</p>
                 </div>
             </div>
         </div>
         <div>
-            <h3>ประวัติธุกรรรม</h3>
+            <h3>ประวัติธุรกรรรม</h3>
             <ul id="list" class="list">
-                <li class="minus">ค่าซ่อมรถ<span> - ฿400</span>
+                <!-- <li class="minus">ค่าซ่อมรถ<span> - ฿400</span>
                 <button class="delete-btn">x</button>
                 </li>
                 <li class="plus">เงินเดือน<span> + ฿40000</span>
                 <button class="delete-btn">x</button>
-                </li>
+                </li> -->
+            </ul>
             <h3>เพิ่มธุรกรรม</h3>
             <form  id="form">
                 <div class="form-control">
-                    <label for="text">ชื่อรายการ</label>
+                    <label for="text">ชื่อธุรกรรม</label>
                     <input type="text" name="" id="text" placeholder="ระบุรายการธุรกรรม">
                 </div>
                 <div class="form-control">
@@ -48,7 +48,5 @@
         </div>
         <link rel="stylesheet" href="style.css">
         <script src="script.js"></script>
-
-    </body>
-
+   </body>
 </html>
